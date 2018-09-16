@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import FriendCard from './Components/FriendCard'
+import Wrapper from "./Components/Wrapper";
 import batman from "./batman.json";
 
 import './App.css';
@@ -20,7 +21,7 @@ class App extends React.Component {
   // The render method returns the JSX that should be rendered
   render() {
     return (
-      <div>
+      <Wrapper >
         <h1 className="title">Friends List</h1>
         {this.state.batman.map(item => <FriendCard
           key={item.id}
@@ -28,7 +29,7 @@ class App extends React.Component {
           id={item.id}
           name={item.name}
           image={item.image} />)}
-     </div>
+     </Wrapper>
     );
 
   }
