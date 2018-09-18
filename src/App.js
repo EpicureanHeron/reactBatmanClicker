@@ -2,7 +2,6 @@ import React from 'react';
 import FriendCard from './Components/FriendCard'
 import Wrapper from "./Components/Wrapper";
 import batman from "./batman.json";
-
 import './App.css';
 
 //should create a compontent that is the counter which as a state fthat is equal to the current score and also keeps the best score
