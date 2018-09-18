@@ -14,15 +14,8 @@ import './App.css';
 
 
 
-//array shuffling 
-//https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array
 
-// function shuffle(a) {
-//   for (let i = a.length - 1; i > 0; i--) {
-//       const j = Math.floor(Math.random() * (i + 1));
-//       [a[i], a[j]] = [a[j], a[i]];
-//   }
-//   return a;
+
 
 class App extends React.Component {
   // Setting the initial state of the Counter component
@@ -66,16 +59,27 @@ class App extends React.Component {
 
   };
 
+  //array shuffling 
+  //https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array
+  shuffle = a => {
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
 
+  }
   // The render method returns the JSX that should be rendered
   render() {
     return (
 
       <Wrapper >
         <h1 className="title">Friends List</h1>
-        <p>Score: {this.state.counter}</p>
-        <p>High Score: {this.state.highScore}</p>
-        {this.state.batman.map(item => <FriendCard
+        <p className="title">Score: {this.state.counter}</p>
+        <p className="title">High Score: {this.state.highScore}</p>
+
+        {this.shuffle(this.state.batman).map(item => <FriendCard
+
           key={item.id}
           removeFriend={this.clicked}
           id={item.id}
