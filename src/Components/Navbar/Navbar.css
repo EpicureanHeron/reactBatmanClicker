@@ -1,0 +1,13 @@
+.navbar-nav.navbar-center {
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+}
+
+.custom {
+  background-color: black !important;
+  color: #FFF200 !important;
+}
+.navbar {
+  border-bottom: 1px #484848 solid;
+}

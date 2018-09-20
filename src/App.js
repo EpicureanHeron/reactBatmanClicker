@@ -2,6 +2,7 @@ import React from 'react';
 import FriendCard from './Components/FriendCard'
 import Wrapper from "./Components/Wrapper";
 import batman from "./batman.json";
+import Navbar from "./Components/Navbar"
 
 import './App.css';
 
@@ -72,22 +73,23 @@ class App extends React.Component {
   // The render method returns the JSX that should be rendered
   render() {
     return (
-
+      <div>
+         <Navbar 
+        currentScore={this.state.counter}
+        highScore={this.state.highScore}
+        />
       <Wrapper >
-        <h1 className="title">Friends List</h1>
-        <p className="title">Score: {this.state.counter}</p>
-        <p className="title">High Score: {this.state.highScore}</p>
-
+       
         {this.shuffle(this.state.batman).map(item => <FriendCard
-
           key={item.id}
           removeFriend={this.clicked}
           id={item.id}
           name={item.name}
           image={item.image} />)}
       </Wrapper>
+      </div>
     );
-
+    
   }
 
 
