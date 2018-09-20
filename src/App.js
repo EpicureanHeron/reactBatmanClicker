@@ -13,18 +13,14 @@ import './App.css';
 
 // const batman = this.state.batman.filter(batman => batman.id !== id);
 
-
-
-
-
-
 class App extends React.Component {
   // Setting the initial state of the Counter component
   state = {
     clickedArr: [],
     batman,
     counter: 0,
-    highScore: 0
+    highScore: 0,
+    message: ''
   };
 
   clicked = id => {
@@ -34,7 +30,8 @@ class App extends React.Component {
     if (!clickedArr.includes(id)) {
 
       clickedArr.push(id);
-      console.log(clickedArr);
+     
+      this.setState({message: "You guessed correctly! "})
 
       if (this.state.counter >= this.state.highScore) {
 
@@ -54,7 +51,8 @@ class App extends React.Component {
       this.setState({
         counter: 0,
         highScore: this.state.highScore,
-        clickedArr: []
+        clickedArr: [],
+        message: "You guessed incorrectly!"
       });
     };
 
@@ -77,6 +75,7 @@ class App extends React.Component {
          <Navbar 
         currentScore={this.state.counter}
         highScore={this.state.highScore}
+        message={this.state.message}
         />
       <Wrapper >
        

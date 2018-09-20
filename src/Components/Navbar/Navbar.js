@@ -2,20 +2,25 @@ import React from "react";
 import "./Navbar.css";
 
 const Navbar = props => (
-  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light custom">
-    <h2>Batman Game</h2>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+  <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-light custom custom-font">
+   <div className="collapse navbar-collapse" id="navbarSupportedContent">
+    <h2 className="custom-font">Batman Memory</h2>
+    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
     </button>
-   
-     
-       
-      <ul class="nav navbar-nav navbar-center">
-            <li>Your Score: {props.currentScore} &nbsp;</li>
-            <li>High Score: {props.highScore} &nbsp;</li>
-          
-        </ul>
-       
+
+  </div>
+
+    <ul className="nav navbar-nav navbar-center">
+      <li className="custom-font selection">{props.message}</li>
+
+    </ul>
+
+    <ul className="navbar-nav ml-auto">
+      <li className="custom-font">Your Score: {props.currentScore} &nbsp;</li>
+      <li className="custom-font"> High Score: {props.highScore}</li>
+    </ul>
+
 
   </nav>
 );

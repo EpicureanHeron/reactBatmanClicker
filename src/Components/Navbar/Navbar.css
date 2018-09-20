@@ -2,12 +2,29 @@
   position: absolute;
   left: 50%;
   transform: translatex(-50%);
+  font-size: 24px;
+  
 }
 
 .custom {
   background-color: black !important;
   color: #FFF200 !important;
+  
 }
 .navbar {
   border-bottom: 1px #484848 solid;
+  
+}
+
+.custom-font {
+  font-family: "Gotham";
+}
+
+.selection {
+  animation: change 3s step-end both;
+}
+
+@keyframes change {
+  from { font-size: 24px; }
+  to   { font-size: 18px }
 }
