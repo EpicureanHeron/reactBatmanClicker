@@ -1,6 +1,6 @@
 .wrapper {
-  margin-top: 50px;
-  padding-top: 50px;
+  /* margin-top: 50px; */
+  /* padding-top: 50px; */
   background: #ECEFF1;
   height: 100%;
   display: flex;
@@ -10,4 +10,8 @@
   align-content: flex-start;
   overflow: auto;
   background-image: url("https://i.ytimg.com/vi/qLM_TPvp-Q4/maxresdefault.jpg"); 
+  /* background-image: url("https://img00.deviantart.net/9c74/i/2015/223/9/2/gotham_city_background_12_by_snowofdahila-d959quq.png"); */
+  background-size: 100%;
+  /* background-image: url("https://img00.deviantart.net/03ca/i/2015/223/f/b/gotham_city_background_10_by_snowofdahila-d959qlz.png"); */
+  
 }

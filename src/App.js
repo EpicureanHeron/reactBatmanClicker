@@ -3,7 +3,7 @@ import FriendCard from './Components/FriendCard'
 import Wrapper from "./Components/Wrapper";
 import batman from "./batman.json";
 import Navbar from "./Components/Navbar"
-
+import Jumbotron from "./Components/Jumbotron"
 import './App.css';
 
 //should create a compontent that is the counter which as a state fthat is equal to the current score and also keeps the best score
@@ -30,8 +30,8 @@ class App extends React.Component {
     if (!clickedArr.includes(id)) {
 
       clickedArr.push(id);
-     
-      this.setState({message: "You guessed correctly! "})
+
+      this.setState({ message: "You guessed correctly! " })
 
       if (this.state.counter >= this.state.highScore) {
 
@@ -72,23 +72,27 @@ class App extends React.Component {
   render() {
     return (
       <div>
-         <Navbar 
-        currentScore={this.state.counter}
-        highScore={this.state.highScore}
-        message={this.state.message}
+        
+        <Navbar
+          currentScore={this.state.counter}
+          highScore={this.state.highScore}
+          message={this.state.message}
         />
-      <Wrapper >
-       
-        {this.shuffle(this.state.batman).map(item => <FriendCard
-          key={item.id}
-          removeFriend={this.clicked}
-          id={item.id}
-          name={item.name}
-          image={item.image} />)}
-      </Wrapper>
+
+        <Jumbotron />
+
+        <Wrapper >
+          {this.shuffle(this.state.batman).map(item => <FriendCard
+            key={item.id}
+            removeFriend={this.clicked}
+            id={item.id}
+            name={item.name}
+            image={item.image} />)}
+        </Wrapper>
+
       </div>
     );
-    
+
   }
 
 
