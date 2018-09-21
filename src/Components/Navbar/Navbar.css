@@ -22,11 +22,11 @@
   font-family: 'Carrois Gothic SC', sans-serif;
 }
 
-.selection {
+/* .selection {
   animation: change 3s step-end both;
 }
 
 @keyframes change {
   from { font-size: 24px; }
   to   { font-size: 18px }
-}
+} */

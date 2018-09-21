@@ -26,23 +26,26 @@ class App extends React.Component {
   clicked = id => {
 
     const clickedArr = this.state.clickedArr;
-
+    
     if (!clickedArr.includes(id)) {
 
       clickedArr.push(id);
 
-      this.setState({ message: "You guessed correctly! " })
+      this.setState({message: ""})
 
       if (this.state.counter >= this.state.highScore) {
 
         this.setState({
           highScore: this.state.highScore + 1,
-          counter: this.state.counter + 1
+          counter: this.state.counter + 1,
+          message: <li className="custom-font">You guessed correctly!</li>
         });
 
       }
       else {
-        this.setState({ counter: this.state.counter + 1 })
+        this.setState({ counter: this.state.counter + 1,
+          message: <li className="custom-font">You guessed correctly!</li>
+         })
       }
 
     }
@@ -52,7 +55,7 @@ class App extends React.Component {
         counter: 0,
         highScore: this.state.highScore,
         clickedArr: [],
-        message: "You guessed incorrectly!"
+        message: <li className="custom-font">You guessed incorrectly!</li>
       });
     };
 

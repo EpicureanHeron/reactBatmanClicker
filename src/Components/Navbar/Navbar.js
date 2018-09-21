@@ -11,8 +11,8 @@ const Navbar = props => (
 
   </div>
 
-    <ul className="nav navbar-nav navbar-center">
-      <li className="custom-font selection">{props.message}</li>
+    <ul className="nav navbar-nav navbar-center selection">
+      {props.message}
 
     </ul>
 
