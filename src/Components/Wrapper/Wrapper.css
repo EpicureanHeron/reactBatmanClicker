@@ -15,3 +15,11 @@
   /* background-image: url("https://img00.deviantart.net/03ca/i/2015/223/f/b/gotham_city_background_10_by_snowofdahila-d959qlz.png"); */
   
 }
+
+.selection {
+  animation: change 3s step-end both;
+}
+ @keyframes change {
+  from { font-size: 24px; }
+  to   { font-size: 18px }
+} 
