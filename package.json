@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://epicureanheron.github.io/reactBatmanClicker",
   "dependencies": {
-    "gh-pages": "^2.1.1",
+    "gh-pages": "^3.2.3",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
     "react-scripts": "1.1.5"
